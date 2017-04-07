@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>VegyScan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link href="css/animate.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/midnight.jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        // Start midnight
+        $(document).ready(function(){
+            $('#nav').midnight();
+        });
+
+        // Start wow
+        var wow = new WOW({
+            mobile: false //désactive les animations sur mobile
+        });
+        wow.init();
+
+        // ScrollTo
+        $(document).ready(function() {
+            $('.js-scrollTo').on('click', function() {
+                var target = $(this).attr('href');
+                var speed = 1000;
+                $('html, body').animate( { scrollTop: $(target).offset().top }, speed );
+                return false;
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <!--- header ---->
+    <div id="accueil" class="header">
+        <div id="nav" class="navbar-fixed-top">
+            <div class="container">
+                <div class="header-nav col-md-4 col-sm-6">
+                    <ul>
+                        <li><a href="#accueil" class="js-scrollTo">Accueil</a></li>
+                        <li><a href="#fonctionnalites" class="js-scrollTo">Fonctionnalités</a></li>
+                        <li><a href="#profil" class="js-scrollTo">Profil</a></li>
+                    </ul>
+                </div>
+                <div class="header-logo col-md-4">
+                    <img src="img/logo.png" alt="logo">
+                </div>
+                <div class="header-contact col-md-4 col-sm-6">
+                    <ul>
+                        <li><a href="#contact" class="js-scrollTo">Contact</a></li>
+                        <li><a href=""><img src="img/facebook.svg" alt="facebook"></a></li>
+                        <li><a href=""><img src="img/twitter.svg" alt="twitter"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 col-md-offset-1">
+                    <div class="divise-info">
+                        <h2><b>Vegy</b>Scan <b>App</b></h2>
+                        <p><b>Vegy</b>Scan, c'est une grande base de données sur les végétaux. Vous pouvez y retrouvez un grand nombre d'arbres et de fleurs.</p>
+                        <div class="buttons">
+                            <div class="video-link">
+                                <a href=""><img src="img/play.png" alt="play">VIDEO DE PRÉSENTATION</a>
+                            </div>
+                            <div class="store">
+                                <div class="store-div wow flipInX">
+                                    <a href=""><img src="img/app_store.svg" alt="app_store"></a>
+                                </div>
+                                <div class="store-div wow flipInX" data-wow-delay="0.5s">
+                                    <a href=""><img src="img/google_play.png" alt="google_play"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="iphone wow fadeInRight" data-wow-delay="1s">
+                        <img src="img/iphone_header.png" alt="iphone" class="iphone-img-header img-responsive">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--- header ---->
+
+    <div class="container" data-midnight="green">
+        <div class="presentation">
+            <h3>Présentation</h3>
+            <p class="wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad commodi dolore facilis iusto laudantium minima numquam perferendis placeat, porro voluptas! Aut consectetur eaque fugiat impedit necessitatibus nobis sequi veritatis vero.</p>
+            <p class="wow fadeInDown" data-wow-delay="0.3s"><b>Donnez ce pouvoir à vos élèves !</b></p>
+            <p class="wow fadeInDown" data-wow-delay="0.6s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus aliquid eius eum exercitationem facilis id iure obcaecati voluptatum? Cum magnam pariatur possimus qui sequi, sit! Dolore excepturi labore pariatur!</p>
+            <p class="wow fadeInDown" data-wow-delay="0.9s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, amet aut consectetur, corporis deserunt dignissimos dolor ducimus ea illum in libero nam, neque nobis odit provident quisquam reiciendis veniam vero?</p>
+        </div>
+
+        <div id="fonctionnalites" class="fonctionnalites">
+            <h3>Fonctionnalités</h3>
+            <div class="row">
+                <div class="col-md-5 wow fadeInDown">
+                    <img class="iphone-img img-responsive" src="img/iphone.png" alt="iphone-scanner">
+                </div>
+                <div class="col-md-7">
+                    <div class="iphone-text wow fadeInRight" data-wow-delay="1s">
+                        <img src="img/scanner_icon.png" alt="scanner-icon">
+                        <h4>Scanner</h4>
+                        <p>Grâce au scanner intégré à VegyScan, il suffit d'un clic pour accéder aux informations.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="iphone-text wow fadeInLeft" data-wow-delay="1s">
+                        <img src="img/vegetaux_icon.png" alt="vegetaux-icon">
+                        <h4>Les Végétaux</h4>
+                        <p>Genre, espèce, cultivar, plus de 500 végétaux sont déjà référencés dans <b>Vegy</b>Scan.</p>
+                        <div class="vegetaux">
+                            <div class="vegetaux-text">
+                                <h5>500 Végétaux</h5>
+                                <p>Mise à jour régulière de la base de données des végétaux.</p>
+                            </div>
+                            <img src="img/plante.png" alt="plante">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 wow fadeInDown">
+                    <img class="iphone-img img-responsive" src="img/iphone.png" alt="iphone-vegetaux">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="profil" data-midnight="green">
+        <div class="container">
+            <h3>Profil</h3>
+            <div class="row">
+                <div class="col-md-5 wow fadeIn">
+                    <img class="iphone-img img-responsive" src="img/iphone.png" alt="iphone-profil">
+                </div>
+                <div class="col-md-7">
+                    <div class="profil-content">
+                        <ul class="nav nav-pills">
+                            <li class="active wow bounceIn">
+                                <a data-toggle="pill" href="#enseignant">ENSEIGNANTS</a>
+                            </li>
+                            <li class="wow bounceIn" data-wow-delay="0.3s">
+                                <a data-toggle="pill" href="#etudiants">ETUDIANTS</a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content wow fadeIn" data-wow-delay="1s">
+                            <div id="enseignant" class="tab-pane fade in active">
+                                <h5>Enseignants</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            </div>
+                            <div id="etudiants" class="tab-pane fade in">
+                                <h5>Étudiants</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="tarifs" data-midnight="green">
+        <div class="container">
+            <h3>Tarifs</h3>
+            <div class="col-md-4 col-md-offset-4 tarif-tableau">
+
+            </div>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="col-md-6 col-md-offset-3">
+            <form action="" id="contact-form">
+                <label for="nom">Nom</label>
+                <input type="text" name="nom" id="nom">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email">
+                <label for="sujet">Sujet</label>
+                <input type="text" name="sujet" id="sujet">
+                <label for="message">Votre message</label>
+                <textarea name="" id="message" rows="10"></textarea>
+                <input type="submit" id="submit" value="Envoyer">
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="col-md-6 col-md-offset-3">
+            <hr width="25%">
+            <div class="copyright">
+                <p>Graphiste : Paul Leroy  -  Développeur : Bastien Germain </p>
+                <p>VegyScan © Tous droits réservés</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
